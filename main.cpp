@@ -28,6 +28,11 @@ int main(void)
 
     std::cout << glGetString(GL_VERSION) << std::endl;
 
+    unsigned int buffer;
+    glGenBuffers(1, &buffer);
+    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+    
+
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
